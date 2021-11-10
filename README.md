@@ -3,6 +3,8 @@ __It is a sample Google Chrome browser extension__
 
 The extension was built in Flutter Web.
 
+![Flutter Web extension showcase](images/showcase.gif)
+
 ### How to build
 
 `% cd /path/to/project/root`
