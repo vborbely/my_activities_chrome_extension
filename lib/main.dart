@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'My Activities Organizer',
       theme: ThemeData(
+        appBarTheme: const AppBarTheme(backgroundColor:  Colors.cyan),
         primarySwatch: Colors.indigo,
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(backgroundColor: Colors.indigoAccent,)
       ),
       home: const MyHomePage(title: 'My Activities'),
     );
@@ -77,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Text(activites[idx].id),
+                            Text("#${activites[idx].id}"),
                             Text(
                               activites[idx].type.name,
                               style: const TextStyle(fontWeight: FontWeight.bold),
@@ -90,12 +92,12 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             GestureDetector(
                               onTap: () => _deleteActivity(activites[idx].id),
-                              child: const Icon(Icons.delete_forever_outlined),
+                              child: const Icon(Icons.delete_forever_outlined, color: Colors.pinkAccent,),
                             )
                           ],
                         ),
                         const SizedBox(height: 10),
-                        const Divider(),
+                        const Divider(indent: 8, endIndent: 8, thickness: 1.0),
                       ],
                     );
                   }),
