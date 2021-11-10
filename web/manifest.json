@@ -1,0 +1,13 @@
+{
+    "name": "My Activities",
+    "description": "Track your daily sport activities and stay fit!",
+    "version": "1.0.0",
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' ; object-src 'self'"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "/icons/tracking.png"
+    },
+    "manifest_version": 3
+}
